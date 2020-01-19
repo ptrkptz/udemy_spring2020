@@ -1,0 +1,28 @@
+18 - inversion of control
+	 the approach of outsourcing the construction and management of objects.
+
+sysout CTRL+SPACE
+	will auto create -- System.out.println();
+syserr CTRL+SPACE
+	will auto create -- System.err.println();
+
+21 - inversion control overview
+	spring container is generically known as APPLICATION CONTEXT
+
+22 - what is a spring bean
+	simply a java object
+
+27 - dependeny injection
+	Textbook definition --client delegates to  calls to another object the responsibility of providing its dependencies
+		WTF does that mean
+
+	outsource the construction and injection of your object to an external entity
+
+	two types of injections
+		constructor injection
+			STEPS:
+			define dependenct interface and class 
+			create a constructor in your class for injections
+			config the dependency injection in Spring config file
+		setter injection
+
