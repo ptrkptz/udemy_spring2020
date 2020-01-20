@@ -1,13 +1,13 @@
 package com.pmp.springdemo;
 
-public class TrackCoach implements Coach {
+public class TrackCoach_beforeBean implements Coach {
 	
 	private FortuneService fortuneService;
 	
-	public TrackCoach() {
+	public TrackCoach_beforeBean() {
 		//Hack for MyApp.java error -- missing the fortuneService
 	}
-	public TrackCoach(FortuneService fortuneService) {
+	public TrackCoach_beforeBean(FortuneService fortuneService) {
 		this.fortuneService = fortuneService;
 	}
 
@@ -21,14 +21,5 @@ public class TrackCoach implements Coach {
 	public String getDailyFortune() {
 		return "Just do it: " +fortuneService.getFortune();
 	}
-	
-	// add init method
-	public void doMyStartup() {
-		System.out.println("Track Coach: inside method doMyStartup");
-	}
-	
-	// add destroy method
-	public void doMyCleanup() {
-		System.out.println("Track Coach: inside method doMyCleanup");
-	}
+
 }

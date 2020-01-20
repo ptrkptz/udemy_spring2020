@@ -13,6 +13,8 @@
     	<property name="printedLoggerLevel" value="FINE"/>
     </bean>
 
+	<!-- load the properites file: sport.properties -->
+	<context:property-placeholder location="classpath:sport.properties" />
 	
     <!-- Define your beans here -->
     <bean id="myFortuneService"
@@ -20,10 +22,15 @@
     </bean>
     
  	<bean id="myCoach"
- 		class="com.pmp.springdemo.FootballCoach">
- 		
+ 		class="com.pmp.springdemo.TrackCoach">
  		<!-- set up constructor injection -->
  		<constructor-arg ref="myFortuneService" />	 		
+ 	</bean>
+ 	
+ 	<bean id="myCricketCoach" class="com.pmp.springdemo.CricketCoach">
+ 		<property name="fortuneService" ref="myFortuneService" /> 
+ 		<property name="emailAddress" value="${foo.email}" />
+ 		<property name="team" value="${foo.team}" />
  	</bean>
 
 </beans>

@@ -1,6 +1,6 @@
 package com.pmp.springdemo;
 
-public class BaseballCoach implements Coach{
+public class BaseballCoach implements Coach {
 	
 	// define a private field for the dependency
 	private FortuneService fortuneService;

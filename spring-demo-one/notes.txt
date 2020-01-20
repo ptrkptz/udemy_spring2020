@@ -26,3 +26,37 @@ syserr CTRL+SPACE
 			config the dependency injection in Spring config file
 		setter injection
 
+34 -- setter injection
+
+
+40 -- inject values from a properties file
+
+43 -- bean scope
+	what is a singleton
+		spring container creates only one instance of the bean, by default
+		it is cached in memory
+		all reqeust for the bean will return a SHARED reference to the SAME bean
+
+	singleton - create a singel shared instance of the bean -- default scope
+	prototype - creates a new bean instance for each container request.
+	request - scoped to an HTTP web request - web apps
+	session - scoped to an HTTP web session - web apps
+	global-sesssion - - scoped to a global HTTP web session - web apps
+
+46 - bean lifecycle
+
+	container started > bean instatited > dependencies injected > internal spring processing > your customer init method > bean is ready to use >>PROCESSING>> container is shutdown > your custom method destroyed > STOP
+
+
+	add custom code during bean init
+		calling custom business logic
+		setting up handles to resources (db, sockets, file, etc)
+
+	add custom code during destruction
+		calling custom business logic
+		destroy handles to resources (db, sockets, file, etc)	
+
+	'init-method' -- setup
+	'destroy-method' -- destroy
+
+	
