@@ -59,4 +59,18 @@ syserr CTRL+SPACE
 	'init-method' -- setup
 	'destroy-method' -- destroy
 
-	
+
+
+51 - Java annotations
+	special labels/markers added to java classes
+	provide meta-data about the class
+	processed at compile time or run-time for special processing
+
+	why spring config w/ annotations
+		xml config can be verbose
+		config your spring bean w/ annotations
+		annotations minimize the xml config
+
+	scanning components classes
+		spring will scan your java classes for special annotations
+		auto register the beans in the spring container

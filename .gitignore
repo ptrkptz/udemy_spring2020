@@ -2,3 +2,5 @@ Servers
 .metadata
 spring-demo-one/lib/
 spring-demo-one/bin/
+spring-demo-annotations/lib/
+spring-demo-annotations/bin/
