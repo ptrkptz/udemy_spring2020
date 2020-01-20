@@ -74,3 +74,9 @@ syserr CTRL+SPACE
 	scanning components classes
 		spring will scan your java classes for special annotations
 		auto register the beans in the spring container
+
+58 - spring dependency injection w/ annotations and autowiring
+	for dependency injection, spring can use auto wiring
+	spring will look for a class that matches the property
+		matches by type: class or interface
+	spring will inject it automatically... hence it is autowired
