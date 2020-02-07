@@ -102,5 +102,16 @@ syserr CTRL+SPACE
 
 	and everything still worked...
 
-65 - field injection
-	
+66 - field injection
+	uses java reflection
+
+68 - which type of injection to use...
+	use consistency
+	all same functionality
+
+69 - annotationa autowiring and  qualifiers
+	what if there are multiple?
+		'NoUniqueBeanDefinitionException' error... spring cannot figure it out which bean to use
+	use @Qualifier("thisBean")
+		can be used on constructor, setter and field injection
+

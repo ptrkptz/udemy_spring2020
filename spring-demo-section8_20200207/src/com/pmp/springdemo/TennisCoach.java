@@ -1,11 +1,15 @@
 package com.pmp.springdemo;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 public class TennisCoach implements Coach {
 	
+	// field injection
+	@Autowired
+	@Qualifier("randomFortuneService")
 	private FortuneService fortuneSvc;
 	
 	// define a default constructor
@@ -14,11 +18,11 @@ public class TennisCoach implements Coach {
 	}
 	
 	// define a setter method
-	@Autowired
+	/*@Autowired
 	public void doSomethingElse(FortuneService theFortuneSvc) {
 		System.out.println(" >> TennisCoach: inside doSomethingElse() method");
 		fortuneSvc=theFortuneSvc;
-	}
+	}*/
 	
 	
 	/*
@@ -29,6 +33,7 @@ public class TennisCoach implements Coach {
 		fortuneSvc=theFortuneSvc;
 	}
 	*/
+	
 
 	@Override
 	public String getDailyWorkout() {
