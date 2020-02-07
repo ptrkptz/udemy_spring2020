@@ -80,3 +80,27 @@ syserr CTRL+SPACE
 	spring will look for a class that matches the property
 		matches by type: class or interface
 	spring will inject it automatically... hence it is autowired
+
+63 - setter injection
+	create setter method(s) in your class for injections
+	config the dep injection w/ @Autowired Annotation 
+
+64 - method injection
+	the setter name does not have to match the class name
+	from this:
+		@Autowired
+		public void setFortuneSvc(FortuneService theFortuneSvc) {
+			System.out.println(" >> TennisCoach: inside fortuneSvc method");
+			fortuneSvc=theFortuneSvc;
+		}
+	to this:
+		@Autowired
+		public void doSomethingElse(FortuneService theFortuneSvc) {
+			System.out.println(" >> TennisCoach: inside doSomethingElse() method");
+			fortuneSvc=theFortuneSvc;
+		}
+
+	and everything still worked...
+
+65 - field injection
+	

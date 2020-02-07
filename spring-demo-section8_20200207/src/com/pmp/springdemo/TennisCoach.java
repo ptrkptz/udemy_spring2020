@@ -15,10 +15,11 @@ public class TennisCoach implements Coach {
 	
 	// define a setter method
 	@Autowired
-	public void setFortuneSvc(FortuneService theFortuneSvc) {
-		System.out.println(" >> TennisCoach: inside fortuneSvc method");
+	public void doSomethingElse(FortuneService theFortuneSvc) {
+		System.out.println(" >> TennisCoach: inside doSomethingElse() method");
 		fortuneSvc=theFortuneSvc;
 	}
+	
 	
 	/*
 	//spring scan for a component that implements FortuneService interface
