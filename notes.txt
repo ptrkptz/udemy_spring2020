@@ -146,7 +146,19 @@ Prototype
 			b/c javax.annotation has been removed from default classpath -- download javax.annotation-api-1.3.2.jar
 
 
+82 - lifecycle and prototype scope
+	'Prototype' scoped beans, Spring does not call the @PreDestroy
 
 
+84 - spring config with java code
+	3 ways of config spring container
+		1 - full xml
+		2 - xml component scan
+		3 - java config
 
+	dev process
+		1. java class w/ @Configuration 
+		2. add component scanning @ComponentScan (optional)
+		3. read spring java config class
+		4. retrieve bean from spring container
 
