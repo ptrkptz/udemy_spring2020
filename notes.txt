@@ -162,3 +162,21 @@ Prototype
 		3. read spring java config class
 		4. retrieve bean from spring container
 
+86 - add logging for java config
+
+87 - Define spring beans w/ java code
+	1. define method to expose bean
+	2. inject bean dependencies
+	3. read spring java config class
+	4. retrieve bean from spring container
+
+91 - inject values for properties file
+	1. create properties file
+	2. load prop file in spring config
+		@PropertySource
+	3. reference value from prop file 
+		@Value($"foo.this")
+			this is called field level injection
+
+
+
