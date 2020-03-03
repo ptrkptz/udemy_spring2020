@@ -175,8 +175,101 @@ Prototype
 	2. load prop file in spring config
 		@PropertySource
 	3. reference value from prop file 
-		@Value($"foo.this")
+		@Value(${"foo.this"})
 			this is called field level injection
 
+96 - spring MVC
+	framework for building web applications in Java
+	based on Model-View-Controller design pattern
+	leverages features of the Core Spring Framework
+
+	benefits
+		build web app UIs in java
+		reusable UI components
+		helps manage app state for web requests
+		process form data
+		flexible config for the view layer
+
+97 mvc - behind the scenes
+	component
+		web pages
+		collection of spring beans
+		spring config
+
+	Front Controller AKA DispatcherServlet
+		part of the Spring framework (jar file)
+	devs create - model, view and controller
+
+	Controller
+		dev code
+		contains biz logic
+			handle request
+			store /retrieve data (from DB, etc)
+			place data in model
+
+	Model - contains data
+		use to pass data 
+
+	View - JSP and JSTL is most common
+		jstl - JSP Std Tag Library
+		jsp - Java Server Page
+
+100 MVC config - overview
+	Part 1
+		add config to file: WEB-INF/web.xml
+		1. Config mvc dispatcher servlet
+		2. set url mappings to mvc dispatcher servlet
+	Part 2
+		config for file: WEB-INF/spring-mvc-demo-servlet.xml
+		3. add support for spring component scannning
+		4. add support for conversion, formatting and validation
+		5. config spring mvc vew resolver 
+
+103 -- here are configs without using XML (Java Config)
+
+104 - Spring MVC - overview
+1. create controller class
+2. define controller method
+3. add request mapping to controller method
+4. return view name
+5. develop view page
+
+@Controller inherit from @Component
 
 
+
+
+SKIP MVC
+
+
+170 - Hibernate overview
+Hibernate is a framework for persisting/saving Java objects ni a database
+
+Benefits
+- handles all low-level sql 
+- minimizes the amt of JDBC code you hve to develop
+- provides the Object-to-relational mapping (ORM)
+
+ORM
+dev defines mapping between java class and DB table
+
+SAve java object with Hibernate
+// create Java object
+Student theStudent = new Student("John,", "Doe","email");
+//save it to the DB
+int theId = (Integer) session.save(theStudent);
+	-- session is a special Hibernate object
+	-- H will steore the data in the DB
+	-- H will return the primary key
+
+Retrieve a java object with H
+// now retrieve from DB using the primary key
+Student myStudent = session.get(Student.class, theId);
+	-- H will query th table for the given id
+
+Query for java objects
+Query query = session.createQuery("from the Student");
+List<Studnet> students = query.list();
+
+171 - H and JDBC
+H uses JDBC for all db communications
